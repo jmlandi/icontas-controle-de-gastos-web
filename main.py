@@ -42,6 +42,11 @@ def dashboard():
 def expenses_create():
   return ExpenseController.create()
 
+@app.route('/expenses/delete/<int:id>')
+def expenses_delete(id):
+  return ExpenseController.delete(id)
+
+
 @app.route('/expenses/edit/<int:id>')
 def expenses_edit(id):
   return ExpenseController.edit(id)
